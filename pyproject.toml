@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xSIT"
+version = "0.1.0"  # Replace with your desired initial version
+authors = [
+    { name = "Andrei V. Konstantinov", email = "andrue.konst@gmail.com" }
+]
+description = "Explainable Set-Input Trees"
+readme = "README.md"
+requires-python = ">=3.9"
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/NTAILab/xSIT"
+Repository = "https://github.com/NTAILab/xSIT"
+
+[tool.setuptools]
+packages = ["sit"]  # This tells setuptools to find and include the 'sit' directory as a package
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
